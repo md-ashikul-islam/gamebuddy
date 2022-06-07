@@ -1,8 +1,10 @@
 // import data from '../data'; its a Static data in front end, we want to switch to backend api calls for data
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useReducer } from 'react';
 import logger from 'use-reducer-logger';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Product from '../components/product';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -46,22 +48,13 @@ function HomeScreen() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          products.map((product) => (
-            <div className="product" key={product.slug}>
-              <Link to={`/products/${product.slug}`}>
-                <img src={product.image} alt={product.name}></img>
-              </Link>
-              <div className="product-info">
-                <Link to={`/products/${product.slug}`}>
-                  <p>{product.name}</p>
-                </Link>
-                <p>
-                  <strong>${product.price}</strong>
-                </p>
-                <button>Add to cart</button>
-              </div>
-            </div>
-          ))
+          <Row>
+            {products.map((product) => (
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>

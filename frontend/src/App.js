@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeScreen from './Views/HomeScreen';
 import ProductScreen from './Views/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
