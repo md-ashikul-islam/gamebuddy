@@ -5,25 +5,24 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { Store } from '../Store';
-import ShippingAddressScreen from './ShippingAddressScreen';
 
 export default function PaymentMethodScreen() {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
-    cart: { shippingAddess, paymentMethod },
+    cart: { shippingAddress, paymentMethod },
   } = state;
   const [paymentMethodName, setPaymentMethod] = useState(
     paymentMethod || 'Bkash'
   );
   useEffect(() => {
-    if (!ShippingAddressScreen.address) {
-      navigate('/payment');
+    if (!shippingAddress.address) {
+      navigate('/shipping');
     }
-  }, [shippingAddess, navigate]);
+  }, [shippingAddress, navigate]);
 
   const submitHandler = (e) => {
-    e.preventdefault();
+    e.preventDefault();
     ctxDispatch({ type: 'SAVE_PAYMENT_METHOD', payload: paymentMethodName });
     localStorage.setItem('paymentMethod', paymentMethodName);
     navigate('/placeorder');
