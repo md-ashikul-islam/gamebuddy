@@ -22,6 +22,7 @@ import PlaceOrderScreen from './Views/PlaceOrderScreen';
 import OrderScreen from './Views/OrderScreen';
 import OrderHistoryScreen from './Views/OrderHistoryScreen';
 import ProfileScreen from './Views/ProfileScreen';
+import SearchScreen from './Views/SearchScreen';
 import Button from 'react-bootstrap/Button';
 import { getError } from './utils';
 import axios from 'axios';
@@ -142,6 +143,7 @@ function App() {
           <Container className="mt-3">
             <Routes>
               <Route path="/products/:slug" element={<ProductScreen />} />
+              <Route path="/search" element={<SearchScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
