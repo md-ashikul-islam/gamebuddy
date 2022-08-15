@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/md-ashikul-islam/amazeon.git"
+    "url": "git+https://github.com/md-ashikul-islam/gamebuddy.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/md-ashikul-islam/amazeon/issues"
+    "url": "https://github.com/md-ashikul-islam/gamebuddy/issues"
   },
-  "homepage": "https://github.com/md-ashikul-islam/amazeon#readme"
+  "homepage": "https://github.com/md-ashikul-islam/gamebuddy#readme"
 }
