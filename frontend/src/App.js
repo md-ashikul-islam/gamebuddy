@@ -192,7 +192,6 @@ function App() {
                   </ProductScreen>
                 }
               />
-              <Route path="/" element={<HomeScreen />} />
               {/* Admin Routes */}
               <Route
                 path="/admin/dashboard"
@@ -202,6 +201,7 @@ function App() {
                   </AdminRoute>
                 }
               ></Route>
+              <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
         </main>
