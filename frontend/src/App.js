@@ -22,6 +22,7 @@ import OrderScreen from './Views/OrderScreen';
 import OrderHistoryScreen from './Views/OrderHistoryScreen';
 import ProfileScreen from './Views/ProfileScreen';
 import SearchScreen from './Views/SearchScreen';
+import ProductListScreen from './Views/ProductListScreen';
 import Button from 'react-bootstrap/Button';
 import { getError } from './utils';
 import axios from 'axios';
@@ -118,13 +119,13 @@ function App() {
                       <LinkContainer to="/admin/dashboard">
                         <NavDropdown.Item>Dashboard</NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/admin/productlist">
+                      <LinkContainer to="/admin/products">
                         <NavDropdown.Item>Products</NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/admin/orderlist">
+                      <LinkContainer to="/admin/orders">
                         <NavDropdown.Item>Orders</NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/admin/userlist">
+                      <LinkContainer to="/admin/users">
                         <NavDropdown.Item>Users</NavDropdown.Item>
                       </LinkContainer>
                     </NavDropdown>
@@ -198,6 +199,14 @@ function App() {
                 element={
                   <AdminRoute>
                     <DashboardScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/products"
+                element={
+                  <AdminRoute>
+                    <ProductListScreen />
                   </AdminRoute>
                 }
               ></Route>
