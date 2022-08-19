@@ -18,6 +18,7 @@ import SigninScreen from './Views/SigninScreen';
 import ShippingAddressScreen from './Views/ShippingAddressScreen';
 import PaymentMethodScreen from './Views/PaymentMethodScreen';
 import PlaceOrderScreen from './Views/PlaceOrderScreen';
+import ProductEditScreen from './Views/ProductEditScreen';
 import OrderScreen from './Views/OrderScreen';
 import OrderHistoryScreen from './Views/OrderHistoryScreen';
 import ProfileScreen from './Views/ProfileScreen';
@@ -207,6 +208,14 @@ function App() {
                 element={
                   <AdminRoute>
                     <ProductListScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/product/:id"
+                element={
+                  <AdminRoute>
+                    <ProductEditScreen />
                   </AdminRoute>
                 }
               ></Route>
