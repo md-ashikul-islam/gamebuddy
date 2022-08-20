@@ -21,6 +21,7 @@ import PlaceOrderScreen from './Views/PlaceOrderScreen';
 import ProductEditScreen from './Views/ProductEditScreen';
 import OrderScreen from './Views/OrderScreen';
 import OrderHistoryScreen from './Views/OrderHistoryScreen';
+import UserEditScreen from './Views/UserEditScreen';
 import OrderListScreen from './Views/OrderListScreen';
 import ProfileScreen from './Views/ProfileScreen';
 import UserListScreen from './Views/UserListScreen';
@@ -234,6 +235,14 @@ function App() {
                 element={
                   <AdminRoute>
                     <ProductEditScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/user/:id"
+                element={
+                  <AdminRoute>
+                    <UserEditScreen />
                   </AdminRoute>
                 }
               ></Route>
