@@ -34,6 +34,7 @@ import SearchBox from './components/SearchBox';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardScreen from './Views/DashboardScreen';
 import AdminRoute from './components/AdminRoute';
+import SignupScreen from './Views/SignupScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -169,6 +170,7 @@ function App() {
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
+              <Route path="/signup" element={<SignupScreen />} />
               <Route
                 path="/profile"
                 element={
