@@ -21,7 +21,9 @@ import PlaceOrderScreen from './Views/PlaceOrderScreen';
 import ProductEditScreen from './Views/ProductEditScreen';
 import OrderScreen from './Views/OrderScreen';
 import OrderHistoryScreen from './Views/OrderHistoryScreen';
+import OrderListScreen from './Views/OrderListScreen';
 import ProfileScreen from './Views/ProfileScreen';
+import UserListScreen from './Views/UserListScreen';
 import SearchScreen from './Views/SearchScreen';
 import ProductListScreen from './Views/ProductListScreen';
 import Button from 'react-bootstrap/Button';
@@ -200,6 +202,22 @@ function App() {
                 element={
                   <AdminRoute>
                     <DashboardScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/orders"
+                element={
+                  <AdminRoute>
+                    <OrderListScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/users"
+                element={
+                  <AdminRoute>
+                    <UserListScreen />
                   </AdminRoute>
                 }
               ></Route>
