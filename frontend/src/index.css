@@ -14,8 +14,8 @@ main {
 }
 .btn-primary,
 .btn-outline-primary {
-  background-color: #f0c040;
-  color: black;
+  background-color: #780d6a;
+  color: rgb(250, 250, 250);
 }
 .products {
   display: flex;
@@ -37,7 +37,7 @@ main {
 }
 
 .rating span {
-  color: #ffc000;
+  color: #514e4e;
 }
 .img-large {
   max-width: 100%;
